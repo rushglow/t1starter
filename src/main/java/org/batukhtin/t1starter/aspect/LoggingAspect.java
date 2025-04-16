@@ -67,6 +67,7 @@ public class LoggingAspect {
 
     public void loggingWithRoot( String message) {
         switch (root) {
+            case "DEBUG" -> log.warn(message);
             case "WARN" -> log.warn(message);
             case "ERROR" -> log.error(message);
             default -> log.info(message);
